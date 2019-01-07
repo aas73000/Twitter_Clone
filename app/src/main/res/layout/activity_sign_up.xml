@@ -49,7 +49,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:primaryColor="@color/colorSecondary"
-        app:secondaryColor="@color/colorSecondary">
+        app:secondaryColor="@color/colorSecondary"
+        app:iconSignifier="@drawable/ic_email_black_24dp">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
             android:id="@+id/signupactivityEmail"
@@ -72,7 +73,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_field_boxes"
         app:primaryColor="@color/colorSecondary"
-        app:secondaryColor="@color/colorSecondary">
+        app:secondaryColor="@color/colorSecondary"
+        app:iconSignifier="@drawable/ic_person_pin_black_24dp">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
             android:id="@+id/signupactivityUsername"
@@ -95,7 +97,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_field_boxes2"
         app:primaryColor="@color/colorSecondary"
-        app:secondaryColor="@color/colorSecondary">
+        app:secondaryColor="@color/colorSecondary"
+        app:iconSignifier="@drawable/ic_vpn_key_black_24dp">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
             android:id="@+id/signupactivityPassword"

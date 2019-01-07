@@ -62,6 +62,8 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                                 progressBar.setAlpha(0);
                             }
                         });
+                Intent intentTwitter = new Intent(SignActivity.this,TwitterUsers.class);
+                startActivity(intentTwitter);
                 break;
             case R.id.signinactivitySignUpButton:
                 Intent intent = new Intent(SignActivity.this,SignUpActivity.class);

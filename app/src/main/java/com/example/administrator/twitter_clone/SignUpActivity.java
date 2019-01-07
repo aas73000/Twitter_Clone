@@ -75,6 +75,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         progressBar.setAlpha(0);
                     }
                 });
+                Intent twitterIntent = new Intent(SignUpActivity.this,TwitterUsers.class);
+                startActivity(twitterIntent);
                 break;
         }
     }
