@@ -8,6 +8,7 @@
     tools:context=".SignActivity">
 
 
+<!--
     <android.support.v7.widget.Toolbar
         android:id="@+id/signinactivityToolbar"
         android:layout_width="match_parent"
@@ -16,6 +17,22 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:alpha="0"/>
+-->
+
+    <ProgressBar
+        android:id="@+id/signinactivityProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="79dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0"
+        android:elevation="@dimen/clear_button_min_height"
+        app:layout_constraintBottom_toBottomOf="@+id/text_field_boxes2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -58,7 +75,7 @@
         app:secondaryColor="@color/colorSecondary">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
-            android:id="@+id/extended_edit_text"
+            android:id="@+id/signinactivityUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorSecondary" />
@@ -82,7 +99,7 @@
         app:secondaryColor="@color/colorSecondary">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
-            android:id="@+id/extended_edit_text2"
+            android:id="@+id/signinactivityPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -91,7 +108,7 @@
     </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signinactivityLoginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,6 +133,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/signinactivityLoginButton" />
 
 </android.support.constraint.ConstraintLayout>

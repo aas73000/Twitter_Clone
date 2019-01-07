@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -19,6 +20,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 //    private Toolbar signupactivityToolbar;
     private Button lognButton,signupButton;
     private ExtendedEditText signupEmail,signupUserName,signupPassword;
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         signupEmail = findViewById(R.id.signupactivityEmail);
         signupUserName = findViewById(R.id.signupactivityUsername);
         signupPassword = findViewById(R.id.signupactivityPassword);
+        progressBar = findViewById(R.id.signupactivityProgressBar);
     }
 
     @Override
@@ -48,6 +51,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent);
                 break;
             case R.id.signupactivitySignUpButton:
+                progressBar.setAlpha(1);
                 final ParseUser parseUser = new ParseUser();
                 if(signupEmail.getText().equals("") || signupUserName.getText().equals("")
                         ||signupPassword.getText().equals("")){
@@ -63,11 +67,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     public void done(ParseException e) {
                         if(e == null){
                             FancyToast.makeText(SignUpActivity.this,"Successfully sign up with "+parseUser.getUsername(),
-                                    FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();;
+                                    FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                         }else{
                             FancyToast.makeText(SignUpActivity.this,e.getMessage(),
                                     FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();;
                         }
+                        progressBar.setAlpha(0);
                     }
                 });
                 break;
