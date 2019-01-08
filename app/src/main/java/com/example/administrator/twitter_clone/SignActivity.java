@@ -3,6 +3,7 @@ package com.example.administrator.twitter_clone;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -56,8 +57,9 @@ public class SignActivity extends AppCompatActivity implements View.OnClickListe
                                    FancyToast.makeText(SignActivity.this,user.getUsername()+" Succesfully log in",
                                            FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                                }else{
-                                   FancyToast.makeText(SignActivity.this,signinUsername.getText()+" not registered",
+                                   FancyToast.makeText(SignActivity.this,signinUsername.getText()+" not registered:"+e.getMessage(),
                                            FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+                                   Log.i("error","login");
                                }
                                 progressBar.setAlpha(0);
                             }

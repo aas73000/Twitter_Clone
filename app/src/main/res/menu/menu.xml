@@ -10,4 +10,11 @@
         android:title="Log out"
         android:visible="true"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/menuTweet"
+        android:title="Tweet"
+        app:showAsAction="always"
+        android:menuCategory="system"
+        android:visible="true"
+        android:icon="@drawable/ic_iconfinder_twitter_306166"/>
 </menu>

@@ -31,7 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".TwitterUsers"></activity>
+        <activity android:name=".TwitterUsers" />
+        <activity android:name=".MyTweetActivity"></activity>
     </application>
 
 </manifest>
