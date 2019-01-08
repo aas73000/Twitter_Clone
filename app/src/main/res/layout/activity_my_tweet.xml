@@ -9,35 +9,69 @@
 
     <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
         android:id="@+id/mytweetTextBox"
-        android:layout_width="309dp"
-        android:layout_height="66dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="448dp"
         android:background="@color/colorPrimaryDark"
+        app:counterTextColor="@color/colorSecondary"
+        app:helperTextColor="@color/colorSecondary"
         app:labelText="Enter Tweet"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:primaryColor="@color/colorSecondary"
+        app:secondaryColor="@color/colorAccent">
 
         <studio.carbonylgroup.textfieldboxes.ExtendedEditText
             android:id="@+id/mytweetTweet"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/colorSecondary"
+            android:textColor="@color/colorSecondary"
+            android:textColorHint="@color/colorSecondary"
+            app:prefixTextColor="@color/colorSecondary"
+            app:suffixTextColor="@color/colorSecondary" />
 
     </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
     <Button
+        android:id="@+id/mytweetGetTweetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Get Tweets"
+        app:layout_constraintEnd_toEndOf="@+id/mytweetTextBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytweetTextBox">
+
+    </Button>
+
+    <Button
         android:id="@+id/mytweetButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="T"
-        app:layout_constraintBottom_toBottomOf="@+id/mytweetTextBox"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/ic_send_black_24dp"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintBottom_toTopOf="@+id/mytweetListView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mytweetTextBox"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/mytweetListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytweetGetTweetButton" />
+
 </android.support.constraint.ConstraintLayout>

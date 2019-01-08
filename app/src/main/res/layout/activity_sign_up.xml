@@ -22,7 +22,7 @@
         app:layout_constraintBottom_toTopOf="@+id/signupactivityLogInButtton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_field_boxes" />
+        app:layout_constraintTop_toTopOf="@+id/mytweetGetTweetButton" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -37,7 +37,7 @@
         app:srcCompat="@mipmap/twitter_image" />
 
     <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
-        android:id="@+id/text_field_boxes"
+        android:id="@+id/mytweetGetTweetButton"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_marginStart="16dp"
@@ -71,7 +71,7 @@
         app:labelText="Enter a user name "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_field_boxes"
+        app:layout_constraintTop_toBottomOf="@+id/mytweetGetTweetButton"
         app:primaryColor="@color/colorSecondary"
         app:secondaryColor="@color/colorSecondary"
         app:iconSignifier="@drawable/ic_person_pin_black_24dp">

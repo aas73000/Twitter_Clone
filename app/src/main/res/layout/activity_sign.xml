@@ -58,7 +58,7 @@
     </com.google.android.material.textfield.TextInputLayout>-->
 
     <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
-        android:id="@+id/text_field_boxes"
+        android:id="@+id/mytweetGetTweetButton"
         android:layout_width="366dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -95,7 +95,7 @@
         app:labelText="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_field_boxes"
+        app:layout_constraintTop_toBottomOf="@+id/mytweetGetTweetButton"
         app:primaryColor="@color/colorSecondary"
         app:secondaryColor="@color/colorSecondary"
         app:iconSignifier="@drawable/ic_vpn_key_black_24dp">
